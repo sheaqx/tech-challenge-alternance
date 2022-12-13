@@ -1,0 +1,12 @@
+
+$nav: #F4F4F4;
+$footer: #F76C6C;
+
+@import "~bootstrap/scss/bootstrap";
+
+nav {
+    background-color: $nav;
+}
+footer {
+    background-color: $footer;
+}
