@@ -25,9 +25,9 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $argonauteRepository->save($newArgonaute, true);
+            $this->addFlash('success', 'Bienvenue à bord de l\'équipage moussaillon');
             return $this->redirectToRoute('app_home');
         }
-        $this->addFlash('success', 'gyfifufguf');
 
         return $this->render('home/index.html.twig', [
             'argonautes' => $argonautes, 'form' => $form

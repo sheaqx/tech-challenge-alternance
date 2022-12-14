@@ -6,7 +6,17 @@ $footer: #F76C6C;
 
 nav {
     background-color: $nav;
+    
 }
 footer {
     background-color: $footer;
 }
+section{
+    display:inline-grid;
+    top:15px;
+    margin-left:30px;
+    margin-right:30px;
+    margin-top:20px;
+    margin-bottom:30px;
+   }
+   

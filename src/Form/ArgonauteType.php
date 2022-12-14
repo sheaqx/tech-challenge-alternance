@@ -21,7 +21,6 @@ class ArgonauteType extends AbstractType
             ])
             ->add('upload', SubmitType::class, [
                 'label' => 'Envoyer',
-                // 'attr' => ['class' => 'btn ']
             ]);
     }
 
