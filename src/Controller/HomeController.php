@@ -17,12 +17,18 @@ class HomeController extends AbstractController
     public function index(ArgonauteRepository $argonauteRepository, Request $request): Response
     {
         $argonautes = $argonauteRepository->findAll();
+
         $newArgonaute = new Argonaute();
         $form = $this->createForm(ArgonauteType::class, $newArgonaute);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
+
             $argonauteRepository->save($newArgonaute, true);
+            return $this->redirectToRoute('app_home');
         }
+        $this->addFlash('success', 'gyfifufguf');
+
         return $this->render('home/index.html.twig', [
             'argonautes' => $argonautes, 'form' => $form
         ]);

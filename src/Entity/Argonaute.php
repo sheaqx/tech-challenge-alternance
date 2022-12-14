@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ArgonauteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ArgonauteRepository::class)]
 class Argonaute
@@ -14,6 +15,12 @@ class Argonaute
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(
+        min: 2,
+        max: 100,
+        minMessage: 'Your first name must be at least {{ limit }} characters long',
+        maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
+    )]
     private ?string $name = null;
 
     public function getId(): ?int
