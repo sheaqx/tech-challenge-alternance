@@ -1,12 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<section>
-		<h1>Ajouter un(e) Argonaute</h1>
-		{% include "components/_form.html.twig" %}
-	</section>
-	<section>
-		<h1>Membres de l'équipage</h1>
-		{% include "home/show.html.twig" %}
-	</section>
+	<main>
+		<section class="add">
+			<h2>Ajouter un(e) Argonaute</h2>
+			{% include "components/_form.html.twig" %}
+		</section>
+		<section class="list">
+			<h2>Membres de l'équipage</h2>
+			{% include "home/show.html.twig" %}
+		</section>
+	</main>
 {% endblock %}

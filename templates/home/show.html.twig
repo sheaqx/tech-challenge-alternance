@@ -1,7 +1,5 @@
 {% for argonaute in argonautes %}
-	<ul class="list-group list-group-flush">
-		<li class="list-group-item">{{ argonaute.name }}</li>
-	</ul>
+	<div class="members">{{ argonaute.name }}</div>
 {% else %}
 	Aucune argonaute trouvée.
 {% endfor %}

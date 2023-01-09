@@ -16,7 +16,7 @@ class Argonaute
 
     #[ORM\Column(length: 255)]
     #[Assert\Length(
-        min: 2,
+        min: 3,
         max: 100,
         minMessage: 'Your first name must be at least {{ limit }} characters long',
         maxMessage: 'Your first name cannot be longer than {{ limit }} characters',
