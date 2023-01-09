@@ -17,9 +17,9 @@ class ArgonauteFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         foreach (self::NAME as $argonauteName) {
-            $category = new Argonaute();
-            $category->setName($argonauteName);
-            $manager->persist($category);
+            $argonaute = new Argonaute();
+            $argonaute->setName($argonauteName);
+            $manager->persist($argonaute);
             $manager->flush();
         }
     }

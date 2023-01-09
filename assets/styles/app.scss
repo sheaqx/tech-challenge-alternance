@@ -1,12 +1,31 @@
-
-$nav: #F4F4F4;
-$footer: #F76C6C;
+$nav: #f4f4f4;
+$footer: #f76c6c;
 
 @import "~bootstrap/scss/bootstrap";
 
 nav {
-    background-color: $nav;
+  background-color: $nav;
+  justify-content: center;
 }
 footer {
-    background-color: $footer;
+  background-color: $footer;
+  margin-top: 2em;
+}
+body {
+  margin: 0;
+}
+main {
+  margin: 10 auto;
+}
+
+h2 {
+  text-align: center;
+}
+.add {
+  margin: 2em 0 4em 0;
+  text-align: center;
+}
+.members {
+  padding: 0.25em 0;
+  text-align: center;
 }
